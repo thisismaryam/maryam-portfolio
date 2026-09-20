@@ -22,7 +22,6 @@ export default function Nav() {
       <div className="nav-inner wrap">
         <a href="#top" className="nav-mark">
           Maryam Zaman
-          <span className="nav-mark-sub">SYSTEM_V.1.0</span>
         </a>
 
         <nav className="nav-links">
