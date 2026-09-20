@@ -1,0 +1,34 @@
+.footer {
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.38);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.footer-mark {
+  font-family: var(--head);
+  font-weight: 700;
+  color: var(--burgundy);
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+}
+
+.footer-top {
+  font-family: var(--head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--magenta);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}

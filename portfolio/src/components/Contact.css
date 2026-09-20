@@ -1,0 +1,83 @@
+.contact-inner {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-star {
+  position: absolute;
+  top: -1rem;
+  left: 12%;
+  width: 40px;
+  opacity: 0.7;
+}
+
+.contact-star5 {
+  position: absolute;
+  top: 2rem;
+  right: 14%;
+  width: 54px;
+  opacity: 0.65;
+}
+
+.contact-title {
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-top: 1.2rem;
+}
+
+.contact-title em {
+  font-style: italic;
+  color: var(--magenta);
+}
+
+.contact-lede {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--burgundy-deep);
+  opacity: 0.84;
+  max-width: 52ch;
+  margin-top: 1.5rem;
+}
+
+.contact-list {
+  width: min(620px, 100%);
+  margin-top: 2.8rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.15rem 0.2rem;
+  border-bottom: 1px solid var(--line);
+  transition: padding-inline 0.22s ease, color 0.22s ease;
+}
+
+.contact-row:hover {
+  padding-inline: 0.9rem;
+  color: var(--magenta);
+}
+
+.contact-row-label {
+  font-family: var(--head);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--cream-dim);
+}
+
+.contact-row-value {
+  font-family: var(--head);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 620px) {
+  .contact-star, .contact-star5 { display: none; }
+  .contact-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+}

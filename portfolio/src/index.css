@@ -1,0 +1,73 @@
+:root {
+  /* palette */
+  --blush:         #fbe4ed;
+  --blush-deep:    #f6cbdd;
+  --blush-pale:    #fdf1f6;
+  --burgundy-deep: #7a1235;
+  --burgundy:      #a3174b;
+  --magenta:       #d6246c;
+  --gold:          #efd48f;
+  --cream-dim:     rgba(122, 18, 53, 0.6);
+  --line:          rgba(122, 18, 53, 0.14);
+  --card:          rgba(255, 255, 255, 0.4);
+
+  /* type */
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --head:    'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --body:    'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  color-scheme: only light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--burgundy-deep);
+  background: var(--blush);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* soft blotchy blush wash behind everything */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 50% at 78% 8%,  rgba(255,255,255,0.85), transparent 70%),
+    radial-gradient(45% 40% at 18% 30%, rgba(255,255,255,0.55), transparent 70%),
+    radial-gradient(55% 45% at 92% 62%, var(--blush-deep), transparent 70%),
+    radial-gradient(70% 60% at 6% 88%,  var(--blush-deep), transparent 70%),
+    var(--blush);
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 { margin: 0; font-family: var(--display); line-height: 1.04; }
+
+p { margin: 0; }
+
+button { font: inherit; }
+
+::selection { background: var(--magenta); color: #fff; }
+
+:focus-visible {
+  outline: 2px solid var(--magenta);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

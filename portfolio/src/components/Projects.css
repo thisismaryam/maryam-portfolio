@@ -1,0 +1,162 @@
+.projects-head {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.projects-title {
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  font-weight: 600;
+  color: var(--burgundy);
+  margin-top: 0.9rem;
+  max-width: 18ch;
+}
+
+.projects-arrow {
+  position: absolute;
+  right: 6%;
+  top: 0.5rem;
+  width: 86px;
+  opacity: 0.55;
+  transform: scaleX(-1);
+}
+
+.project-list {
+  border-top: 1px solid var(--line);
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: start;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.22s ease, padding-inline 0.22s ease;
+}
+
+.project-row:hover {
+  background: rgba(255, 255, 255, 0.5);
+  padding-inline: 1.1rem;
+}
+
+.project-row-static { cursor: default; }
+
+.project-num {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--magenta);
+  opacity: 0.55;
+}
+
+.project-main { max-width: 62ch; }
+
+.project-tag {
+  font-family: var(--head);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--magenta);
+}
+
+.project-name {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--burgundy);
+  margin-top: 0.5rem;
+}
+
+.project-sub {
+  font-family: var(--head);
+  font-size: 0.95rem;
+  color: var(--burgundy-deep);
+  opacity: 0.8;
+  margin-top: 0.35rem;
+}
+
+.project-desc {
+  font-size: 0.97rem;
+  line-height: 1.66;
+  color: var(--burgundy-deep);
+  opacity: 0.8;
+  margin-top: 0.9rem;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.project-stack span {
+  font-family: var(--head);
+  font-size: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.26rem 0.65rem;
+  color: var(--cream-dim);
+}
+
+.project-view {
+  font-family: var(--head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--magenta);
+  white-space: nowrap;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  margin-top: 0.4rem;
+}
+
+/* ── also shipped ───────────────────────────── */
+.also-shipped {
+  margin-top: 3.2rem;
+}
+
+.also-shipped-label {
+  font-family: var(--head);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--cream-dim);
+}
+
+.also-shipped-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.1rem;
+}
+
+.also-shipped-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 1.05rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.also-shipped-item strong {
+  font-family: var(--head);
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--burgundy-deep);
+}
+
+.also-shipped-item span {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--cream-dim);
+}
+
+@media (max-width: 900px) {
+  .also-shipped-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .projects-arrow { display: none; }
+}
+
+@media (max-width: 640px) {
+  .project-row { grid-template-columns: 1fr; gap: 0.6rem; }
+  .project-num { font-size: 1.2rem; }
+  .also-shipped-grid { grid-template-columns: 1fr; }
+}
