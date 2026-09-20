@@ -6,25 +6,25 @@ const CERTIFICATES = [
         when: 'Sep 2026',
         what: 'Master Full-Stack Web Development with Laravel & PHP',
         where: 'Board Infinity',
-        href: '#',
+        href: 'https://coursera.org/share/af705f878f6bb429aeafda1913f1493e',
     },
     {
         when: 'Aug 2026',
         what: 'Introduction to Front-End Development',
         where: 'Meta',
-        href: '#',
+        href: 'https://coursera.org/share/137c8116742e16893e6982dd05a99e31',
     },
     {
         when: 'Jul 2026',
         what: 'Crash Course on Python',
         where: 'Google',
-        href: '#',
+        href: 'https://coursera.org/share/2c4047c3dc3b34a10fd2e57d855876b4',
     },
     {
         when: 'Jun 2026',
         what: 'Getting Started with AWS Generative AI for Developers',
         where: 'Amazon Web Services',
-        href: '#',
+        href: 'https://coursera.org/share/02cf13349e2bb9ab7e72da93f063a6fa',
     },
 ]
 
